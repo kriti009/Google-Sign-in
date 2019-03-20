@@ -69,9 +69,9 @@ app.get('/return',
     // Successful authentication, redirect home.
     res.redirect('/');
 });
-app.get("/home", function(req, res){
-    console.log(req.user);
-});
+// app.get("/home", function(req, res){
+//     console.log(req.user);
+// });
 // app.get('/profile',
 //   require('connect-ensure-login').ensureLoggedIn(),
 //   function(req, res){
