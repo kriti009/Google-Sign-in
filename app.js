@@ -68,7 +68,7 @@ app.get('/return',
     res.redirect('/');
 });
 app.get("/home", function(req, res){
-    res.render("home");
+    res.redirect("/");
 });
 // app.get('/profile',
 //   require('connect-ensure-login').ensureLoggedIn(),
