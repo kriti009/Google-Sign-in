@@ -54,10 +54,12 @@ app.get('/login',
   function(req, res){
     res.render('login');
 });
+
 app.get("/logout", function(req, res){
     req.logout();
     res.redirect("/");
  });
+
 app.get('/login/google',
   passport.authenticate('google', { scope: ['profile'] }));
 
@@ -68,7 +70,7 @@ app.get('/return',
     res.redirect('/');
 });
 app.get("/home", function(req, res){
-    res.redirect("/");
+    console.log(req.user);
 });
 // app.get('/profile',
 //   require('connect-ensure-login').ensureLoggedIn(),
