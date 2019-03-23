@@ -120,7 +120,7 @@ app.get('/login/google',
 
 app.get('/return', 
   passport.authenticate('google', { 
-      successRedirect : '/',
+      
       failureRedirect: '/login' 
     }),
   function(req, res) {
