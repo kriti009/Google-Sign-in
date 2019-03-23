@@ -3,6 +3,12 @@
     <div>
         <a href="/logout">LogOut</a>
     </div>
+    <div>
+        <li><%= user.google.id %></li>
+        <li><%= user.google.token %></li>
+        <li><%= user.google.email %></li>
+        <li><%= user.google.name %></li>
+    </div>
 <% }else{ %>
     <div>
         <a href="/login">login</a>
