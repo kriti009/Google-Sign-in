@@ -120,13 +120,10 @@ app.get('/login/google',
 
 app.get('/return', 
   passport.authenticate('google', { 
-      
+      successRedirect: '/profile',
       failureRedirect: '/login' 
-    }),
-  function(req, res) {
-    // Successful authentication, redirect home.
-    res.redirect('/');
-});
+    }));
+  
 app.get("/home", function(req, res){
     console.log(req.user);
     res.redirect('/profile');
